@@ -1,13 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import AppLayout from '@/components/layout/AppLayout';
+import ChatInterface from '@/components/chat/ChatInterface';
+import VulnerabilityDashboard from '@/components/dashboard/VulnerabilityDashboard';
+import TargetInput from '@/components/scan/TargetInput';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <AppLayout>
+      <TargetInput />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <VulnerabilityDashboard />
+        <ChatInterface />
       </div>
-    </div>
+    </AppLayout>
   );
 };
 
